@@ -28,7 +28,7 @@ Lorsqu’on utilise la méthode précédente pour créer des Threads on perd la 
 
 - Implémentation de la méthode run()  
 
-- Instanciation d’un Objet Thread en passant l’instance de Runnable au constructeur  
+- Instanciation d’un Objet Thread en passant l’instance Runnable au constructeur  
 
 - Invocation de la méthode start() de l’instance créée  
 
