@@ -7,6 +7,10 @@ Un Thread est la plus petite unité d'excution (ensemble d'instructions) contenu
 
 ![](https://github.com/AfifBouzidi/JAVA_CONCURRENCY/blob/master/Thread.png)  
 
+### Ordonnanceur  
+
+L’ordonnanceur/scheduler est un composant du noyau du système d'exploitation choisissant l'ordre d'exécution des processus/threads.
+
 
 ## Création des threads en java   
 
