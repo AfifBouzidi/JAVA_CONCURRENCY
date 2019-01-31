@@ -28,7 +28,8 @@ Lorsqu’on utilise la méthode précédente pour créer des Threads on perd la 
 
 - Implémentation de la méthode run(): ````public void run() {...} ````  
 
-- Instanciation d’un Objet Thread en passant l’instance Runnable au constructeur:  ```` Thread myThread = new Thread(new Sing());```` 
+- Instanciation d’un Objet Thread en passant l’instance Runnable au constructeur:  
+```` Thread myThread = new Thread(new Sing());```` 
 
 - Invocation de la méthode start() de l’instance créée: ````  myThread.start() ````  
 
