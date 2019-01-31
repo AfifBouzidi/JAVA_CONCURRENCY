@@ -24,13 +24,13 @@ La classe Thread peut être utilisée pour créer et démarrer un nouveau thread
 ### Création par implémentation de l'interface Runnable  
 Lorsqu’on utilise la méthode précédente pour créer des Threads on perd la flexibilité d'hériter d'une autre classe, pour contourner ce problème, au lieu d'étendre la classe Thread, on utilise l’implémentation de l'interface Runnable. les étapes de création d'une instance Thread:
 
-- Création d’une classe héritant de l’interface Runnable   
+- Création d’une classe héritant de l’interface Runnable: ````class MyRunnable implements Runnable````   
 
-- Implémentation de la méthode run()  
+- Implémentation de la méthode run(): ````public void run() {...} ````  
 
-- Instanciation d’un Objet Thread en passant l’instance Runnable au constructeur  
+- Instanciation d’un Objet Thread en passant l’instance Runnable au constructeur:  ```` Thread myThread = new Thread(new Sing());```` 
 
-- Invocation de la méthode start() de l’instance créée  
+- Invocation de la méthode start() de l’instance créée: ````  myThread.start() ````  
 
 
 
