@@ -13,11 +13,11 @@ Un Thread est la plus petite unité d'excution (ensemble d'instructions) contenu
 ### Création par héritage de la classe Thread  
 La classe Thread peut être utilisée pour créer et démarrer un nouveau thread, les étapes de création des instances sont:  
 
-- Création d’une classe qui hérite de la classe Thread  
+- Création d’une classe qui hérite de la classe Thread  ```` class MyThread extends Thread ````
 
-- Redéfinition de la méthode run()  
+- Redéfinition de la méthode run()  ````public void run() {...} ````
 
-- Invocation de la méthode start() de l’instance créée  
+- Invocation de la méthode start() de l’instance créée  ````  myThread.start() ```` 
 
 
 
