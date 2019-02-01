@@ -44,4 +44,6 @@ Lorsqu’on utilise la méthode précédente pour créer des Threads on perd la 
 
 ## Code thread-safe  
 
+![](https://github.com/AfifBouzidi/JAVA_CONCURRENCY/blob/master/Thread%20lifecycle.png)  
+
 
