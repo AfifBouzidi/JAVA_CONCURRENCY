@@ -52,7 +52,7 @@ Un thread peut suspendre son exécution soit suite à l'appel d'une méthode exp
 - L’ordonnanceur déplace un thread de l'état RUNNING vers READY pour prendre en charge le traitement simultané des threads 
 - Appel de la méthode yield() : La méthode statique yield() oblige le thread en cours d’exécution à suspendre son exécution et à abandonner son utilisation actuelle du processeur (passe à l’état READY aussi Il est possible que l’ordonnanceur peut aussi l'ignorer)
 - Appel de la méthode sleep() : la méthode statique Thread.sleep() force le thread en cours d'exécution à abandonner temporairement son exécution pendant au moins le nombre de millisecondes (et de nanosecondes) spécifié et à passer à l'état TIMED_WAITING.
-- Appel de la méthode join() : La méthode d’instance join() garantit que le thread appelant n’exécutera pas son code restant jusqu'à ce que le thread sur lequel il appelle join() se termine. La classe thread redéfinit la méthode join() comme suit :  
+- Appel de la méthode join() : La méthode d’instance join() garantit que le thread appelant n’exécutera pas son code restant jusqu'à ce que le thread sur lequel il appelle join() se termine. La classe thread surcharge la méthode join() comme suit :  
 
 ````public final synchronized void join(long milli) throws InterruptedException````  
 
