@@ -45,7 +45,7 @@ Lorsqu’on utilise la méthode précédente pour créer des Threads on perd la 
 ![](https://github.com/AfifBouzidi/JAVA_CONCURRENCY/blob/master/Thread_lifecycle.png)  
 
 ### Lancer le thread   
-Appel de la méthode start(). On appelle start() une seule fois sur une instance de thread lorsque celle-ci est
+On appelle la méthode start() une seule fois sur une instance de thread lorsque celle-ci est
 à l'état NEW. L'appel de start () sur un thread dans un autre état déclenchera une exception IllegalThreadStateException.
   
 
