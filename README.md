@@ -71,12 +71,11 @@ Un thread termine son exécution lorsque sa méthode run () est terminée, il es
 
 ## Code thread-safe  
 
-### Zones mémoire de la JVM  
-Les zones de mémoire de la JVM peuvent être classées en deux groupes :
+La première étape pour écrire un code thread-safe est l’identification de données qui sont partagées entre les threads. Les zones de mémoire de la JVM peuvent être classées en deux groupes :   
 
 - Géré par thread : la zone mémoire est allouée pour chaque thread créé, ces zones de données sont initialisées au démarrage du thread et détruites à la fin du thread.
 
-- Partagé avec tous les threads : la zone de mémoire est commune et accessible à tous les threads, initialisée au démarrage de la machine virtuelle Java et détruite à l'arrêt
+- Partagé avec tous les threads : la zone de mémoire est commune et accessible à tous les threads, initialisée au démarrage de la machine virtuelle Java et détruite à l'arrêt  
 
 ![](https://github.com/AfifBouzidi/JAVA_CONCURRENCY/blob/master/JVM_Data_Areas_.png)
 
