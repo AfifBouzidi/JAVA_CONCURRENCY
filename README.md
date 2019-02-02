@@ -100,6 +100,7 @@ Chaque objet Java est associé à un moniteur, qui peut être verrouillé ou dé
 
 
 ### Méthode synchronized  
+Les méthodes qui modifient l'état des variables d'instance ou statiques doivent être définies en tant que méthodes synchronized. Cela empêche plusieurs threads de modifier les données partagées de manière à générer des valeurs incorrectes.  
 Les méthodes Synchronized sont définies en préfixant la définition d'une méthode avec le mot clé synchronized (méthode statique ou d’instance). ```` synchronized public void myMethod() {....}````  
 Lorsqu'un thread appelle une méthode synchronisée, il verrouille automatiquement le moniteur. Si la méthode est une méthode d’instance, le thread verrouille le moniteur associé à l’instance (référencé par this). Pour les méthodes statiques, le thread verrouille le moniteur associé à l'objet Class.
 
