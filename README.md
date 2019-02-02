@@ -122,7 +122,9 @@ Les objets immuables ne peuvent pas donner lieu à des données incohérentes ou
 ### Variables volatiles  
 Dans un environnement multithread, chaque Thread peut copier des variables de la mémoire principale dans un cache de la CPU (pour des raisons de performances). Si le serveur contient plusieurs processeurs, chaque thread peut s'exécuter sur un processeur différent.  Il n'y a aucune garantie quand la JVM fait la synchronisation entre les caches et la mémoire principale ce qui peut engendrer l’incohérence de données.  
 
-es variables volatiles Java sont des variables qui sont toujours lues directement à partir de la mémoire principale. Lorsqu'une nouvelle valeur est affectée à une variable volatile, la valeur est toujours écrite immédiatement dans la mémoire principale. Cela garantit que la dernière valeur d'une variable volatile est toujours visible par les autres threads. 
+![](https://github.com/AfifBouzidi/JAVA_CONCURRENCY/blob/master/volatile.png)  
+
+Les variables volatiles Java sont des variables qui sont toujours lues directement à partir de la mémoire principale. Lorsqu'une nouvelle valeur est affectée à une variable volatile, la valeur est toujours écrite immédiatement dans la mémoire principale. Cela garantit que la dernière valeur d'une variable volatile est toujours visible par les autres threads. 
 
 L'écriture d'une valeur dans une variable volatile est une opération atomique. Cependant, une séquence read-update-write  effectuée sur une variable volatile n'est pas atomique et conduit toujours à des conditions de concurrence si elle est effectuée par plusieurs threads (exemple opérations sur les compteurs), si deux threads lisent et écrivent à la fois sur une variable partagée, utiliser le mot-clé volatile ne permet pas de résoudre le problème d’accès concurrent.
 
