@@ -91,6 +91,12 @@ Les zones de mémoire de la JVM peuvent être classées en deux groupes :
 
 
 ### Verrouillage d’objets et moniteurs  
+Chaque objet Java est associé à un moniteur, qui peut être verrouillé ou déverrouillé par un thread. À la fois, un seul thread peut verrouiller un moniteur (propriétaire du moniteur). Si un autre thread souhaite acquérir le moniteur de cet objet, il doit attendre qu'il soit libéré. Une fois acquis, un thread peut libérer le verrou sur le moniteur si :  
+- Il a terminé son exécution.  
+
+- Il doit attendre qu'une autre opération soit terminée.  
+
+
 
 ### Méthode synchronized  
 
