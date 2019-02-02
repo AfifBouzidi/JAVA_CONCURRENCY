@@ -71,7 +71,7 @@ Un thread termine son exécution lorsque sa méthode run () est terminée, il es
 
 ## Code thread-safe  
 
-### Zones de mémoire de la JVM  
+### Zones mémoire de la JVM  
 Les zones de mémoire de la JVM peuvent être classées en deux groupes :
 
 - Géré par thread : la zone mémoire est allouée pour chaque thread créé, ces zones de données sont initialisées au démarrage du thread et détruites à la fin du thread.
