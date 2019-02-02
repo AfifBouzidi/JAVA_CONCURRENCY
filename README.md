@@ -106,9 +106,13 @@ Lorsqu'un thread appelle une méthode synchronisée, il verrouille automatiqueme
 
 ### Bloc synchronized  
 Pour exécuter des instructions d’un bloc synchronized, un thread doit acquérir un verrou sur un moniteur de 'importe quel objet
-```` public void myMethod() {````
-````synchronized(anyObject) {....} ````
-````} ````
+```` public void myMethod() {````  
+
+````synchronized(anyObject) { ....  
+} ````  
+
+````} ```` 
+
 
 ### Objets immuables  
 
