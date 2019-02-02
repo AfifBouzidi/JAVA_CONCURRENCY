@@ -71,6 +71,24 @@ Un thread termine son exécution lorsque sa méthode run () est terminée, il es
 
 ## Code thread-safe  
 
+### Zones de mémoire de la JVM  
+Les zones de mémoire de la JVM peuvent être classées en deux groupes :
+
+- Géré par thread : la zone mémoire est allouée pour chaque thread créé, ces zones de données sont initialisées au démarrage du thread et détruites à la fin du thread.
+
+- Partagé avec tous les threads : la zone de mémoire est commune et accessible à tous les threads, initialisée au démarrage de la machine virtuelle Java et détruite à l'arrêt
+
+![](https://github.com/AfifBouzidi/JAVA_CONCURRENCY/blob/master/JVM%20Data%20Areas.png)
+
+- Heap Area : La zone de données heap est utilisée pour stocker des objets de classes et les tableaux.
+
+- Method Area : Toutes les données de niveau classe seront stockées dans method area, y compris les variables statiques. Il existe une seule zone de méthode par machine virtuelle et il s'agit d'une ressource partagée.
+
+- JVM Stack Area : Pour chaque thread, une pile d'exécution distincte sera créée. Pour chaque appel de méthode, une entrée sera faite dans la mémoire de pile appelée Stack Frame. Toutes les variables locales seront créées dans la mémoire de la pile.
+
+- PC Registers : Chaque thread aura des registres PC distincts, afin de conserver l'adresse de l'instruction en cours d'exécution une fois l'instruction exécutée, le registre PC sera mis à jour avec l'instruction suivante.
+
+- Native Method stacks : contient des informations sur la méthode native. Pour chaque thread, une pile de méthodes natives distincte sera créée.
 
 
 
