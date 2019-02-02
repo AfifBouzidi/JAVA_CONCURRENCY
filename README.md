@@ -70,8 +70,8 @@ Un thread peut suspendre son exécution soit suite à l'appel d'une méthode exp
 Un thread termine son exécution lorsque sa méthode run () est terminée, il est non recommandé d'utiliser la méthode stop() pour terminer l’exécution d’un Thread. 
 
 ## Code thread-safe  
-
-La première étape pour écrire un code thread-safe est l’identification de données qui sont partagées entre les threads. Les zones de mémoire de la JVM peuvent être classées en deux groupes :   
+Un code est thread-safe s'il fonctionne correctement lors de l'exécution simultanée par plusieurs threads. La première étape pour écrire un code thread-safe est l’identification de données qui sont partagées entre les threads.  
+Les zones de mémoire de la JVM peuvent être classées en deux groupes :   
 
 - Géré par thread : la zone mémoire est allouée pour chaque thread créé, ces zones de données sont initialisées au démarrage du thread et détruites à la fin du thread (JVM Stack Area, Native Method stacks, PC Registers)
 
