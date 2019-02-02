@@ -96,6 +96,7 @@ Chaque objet Java est associé à un moniteur, qui peut être verrouillé ou dé
 
 - Il doit attendre qu'une autre opération soit terminée.  
 
+![](https://github.com/AfifBouzidi/JAVA_CONCURRENCY/blob/master/Verrouillage_moniteurs.png)  
 
 
 ### Méthode synchronized  
