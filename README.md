@@ -116,6 +116,7 @@ Pour exécuter des instructions d’un bloc synchronized, un thread doit acquér
 
 
 ### Objets immuables  
+Les objets immuables ne peuvent pas donner lieu à des données incohérentes ou à un état incorrect car, une fois initialisées, elles ne sont pas modifiables. Les objets immuables tels qu'une instance de la classe String et toutes les classes wrapper (Boolean, Long, Integer, etc.) sont thread-safe.  
 
 ### Variables volatiles  
 
