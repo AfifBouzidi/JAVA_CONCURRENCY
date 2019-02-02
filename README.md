@@ -90,4 +90,13 @@ Les zones de mémoire de la JVM peuvent être classées en deux groupes :
 - Native Method stacks : contient des informations sur la méthode native. Pour chaque thread, une pile de méthodes natives distincte sera créée.
 
 
+### Verrouillage d’objets et moniteurs  
+
+### Méthode synchronized  
+
+### Bloc synchronized  
+
+### Objets immuables  
+
+### Variables volatiles  
 
