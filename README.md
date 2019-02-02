@@ -105,6 +105,10 @@ Les méthodes Synchronized sont définies en préfixant la définition d'une mé
 Lorsqu'un thread appelle une méthode synchronisée, il verrouille automatiquement le moniteur. Si la méthode est une méthode d’instance, le thread verrouille le moniteur associé à l’instance (référencé par this). Pour les méthodes statiques, le thread verrouille le moniteur associé à l'objet Class.
 
 ### Bloc synchronized  
+Pour exécuter des instructions d’un bloc synchronized, un thread doit acquérir un verrou sur un moniteur de 'importe quel objet
+```` public void myMethod() {````
+````synchronized(anyObject) {....} ````
+````} ````
 
 ### Objets immuables  
 
