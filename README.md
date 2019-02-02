@@ -130,4 +130,7 @@ L'écriture d'une valeur dans une variable volatile est une opération atomique.
 
 Si un seul thread lit et écrit la valeur d'une variable volatile et que d'autres threads ne lisent que la variable, alors les threads en lecture verront la dernière valeur écrite dans la variable volatile. Sans rendre la variable volatile, cela ne serait pas garanti.
 
+### Deadlock  
+Le Deadlock se produire lorsqu'un thread attend un verrou d'objet, acquis par un autre thread et que le second thread attend un verrou d'objet acquis par le premier thread.  
 
+![](https://github.com/AfifBouzidi/JAVA_CONCURRENCY/blob/master/Deadlock.png)
