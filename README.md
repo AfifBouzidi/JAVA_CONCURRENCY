@@ -144,4 +144,4 @@ Starvation décrit une situation dans laquelle un thread détient un verrou pend
 - Un thread ne reçoit pas de temps CPU pour l'exécution car il a une priorité basse par rapport aux autres threads qui ont une priorité plus élevée.  
 
 ### Livelock  
-Les threads dans un livelock ne sont pas bloqués; ils se répondent, mais ils ne peuvent pas aller jusqu'au bout. C'est comparable à deux personnes qui se croiser dans un couloir. A se déplace à sa gauche pour laisser passer B, tandis que B Jerry se déplace à sa droite pour laisser passer A. Ils se bloquent, A se place à sa droite, tandis que B se place à sa gauche. Ils se bloquent encore.
+Les threads dans un livelock ne sont pas bloqués; ils se répondent, mais ils ne peuvent pas aller jusqu'au bout. C'est comparable à deux personnes A et B qui se croiser dans un couloir. A se déplace à sa gauche pour laisser passer B, tandis que B Jerry se déplace à sa droite pour laisser passer A. Ils se bloquent, A se place à sa droite, tandis que B se place à sa gauche. Ils se bloquent encore.
