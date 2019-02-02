@@ -78,7 +78,7 @@ Les zones de mémoire de la JVM peuvent être classées en deux groupes :
 
 - Partagé avec tous les threads : la zone de mémoire est commune et accessible à tous les threads, initialisée au démarrage de la machine virtuelle Java et détruite à l'arrêt
 
-![](https://github.com/AfifBouzidi/JAVA_CONCURRENCY/blob/master/JVM%20Data%20Areas.png)
+![](https://github.com/AfifBouzidi/JAVA_CONCURRENCY/blob/master/JVM_Data_Areas.png)
 
 - Heap Area : La zone de données heap est utilisée pour stocker des objets de classes et les tableaux.
 
