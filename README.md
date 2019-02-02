@@ -64,7 +64,8 @@ Un thread peut suspendre son exécution soit suite à l'appel d'une méthode exp
 
 ````public final void join() throws InterruptedException ````  
 
-- Appel des méthodes wait(), notify(), et notifyAll(): Un thread peut suspendre son exécution et attendre un objet en appelant wait(), jusqu’à ce qu’un autre thread appelle notify() ou notifyAll() sur le même objet. Les méthodes wait(), notify() et notifyAll() peuvent être appelées sur tous les objets Java, car ils sont définis dans la classe Object et non dans la classe Thread, (ces méthodes doivent étre appelées dans des méthode/blocs synchronized)  
+- Appel des méthodes wait(), notify(), et notifyAll(): Un thread peut suspendre son exécution et attendre un objet en appelant wait(), jusqu’à ce qu’un autre thread appelle notify() ou notifyAll() sur le même objet. Les méthodes wait(), notify() et notifyAll() peuvent être appelées sur tous les objets Java, car ils sont définis dans la classe Object et non dans la classe Thread.  
+Les méthodes wait (), notify () et notifyAll () doivent être appelées à partir d’une méthode ou blocs de code synchronized, sinon une exception IllegalMonitorStateException sera levée par la JVM.
 
 ### Terminer l'exécution d’un Thread  
 Un thread termine son exécution lorsque sa méthode run () est terminée, il est non recommandé d'utiliser la méthode stop() pour terminer l’exécution d’un Thread. 
