@@ -132,16 +132,16 @@ Si un seul thread lit et écrit la valeur d'une variable volatile et que d'autre
 
 ### Problèmes dans un environnement multithread  
 
-### Deadlock  
+#### Deadlock  
 Le Deadlock se produit lorsqu'un thread attend un verrou d'objet, acquis par un autre thread et que le second thread attend un verrou d'objet acquis par le premier thread.  
 
 ![](https://github.com/AfifBouzidi/JAVA_CONCURRENCY/blob/master/Deadlock.png)
 
-### Starvation  
+#### Starvation  
 Starvation décrit une situation dans laquelle un thread détient un verrou pendant longtemps, de sorte que les autres threads sont bloqués :
 - Les threads sont bloqués indéfiniment car un thread met longtemps à exécuter un code synchronized  
 
 - Un thread ne reçoit pas de temps CPU pour l'exécution car il a une priorité basse par rapport aux autres threads qui ont une priorité plus élevée.  
 
-### Livelock  
+#### Livelock  
 Les threads dans un livelock ne sont pas bloqués, ils se répondent, mais ils ne peuvent pas aller jusqu'au bout. C'est comparable à deux personnes A et B qui se croisent dans un couloir. A se déplace à sa gauche pour laisser passer B, tandis que B se déplace à sa droite pour laisser passer A. Ils se bloquent, A se place à sa droite, tandis que B se place à sa gauche. Ils se bloquent encore.
