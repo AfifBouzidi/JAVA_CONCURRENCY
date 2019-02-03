@@ -15,7 +15,7 @@ public class Task implements Callable<Integer> {
 	public Integer call() throws Exception {
 		System.out.println("performing operation "+a+"X"+b);
 		Thread.sleep(2000);
-		return a + b;
+		return a * b;
 	}
 
 }
