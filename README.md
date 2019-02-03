@@ -171,3 +171,6 @@ L'interface ExecutorService étend l'interface Executor et définit des méthode
 
 ### L’interface ScheduledExecutorService  
 L’interface ScheduledExecutorService permet de lancer des tâches périodiques. Ces tâches peuvent se lancer après un certain laps de temps.
+
+### Thread pools  
+Un pool de threads comprend un pool homogène de threads, celles-ci sont généralement liées à une file d'attente contient des tâches.  L'utilisation d'un pool permet de contrôler le nombre maximum de threads qui peuvent être exécutés en simultané. Pour derterminer la taille optimale du pool de threads on peut invoquer la méthode availableProcessors() de la classe Runtime qui renvoie un entier représentant le nombre de processeurs disponibles sur la machine et d'utiliser cette valeur comme taille du pool.
