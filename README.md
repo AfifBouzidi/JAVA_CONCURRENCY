@@ -163,3 +163,5 @@ La méthode run() de l’interface Runnable ne renvoie pas de valeur et ne peut 
 ### L’interface Future 
 Future représente le résultat d'une tâche asynchrone, elle fournit des méthodes pour vérifier si tâche est terminée, pour attendre son achèvement et pour récupérer le résultat.
 
+### L’interface Executor 
+L'interface Executor permet de définir des classes responsables de l’exécution des tâches implémentant l’interface Runnable, fournit une seule méthode: ````void	execute(Runnable command)````  
