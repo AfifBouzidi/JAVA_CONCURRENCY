@@ -12,9 +12,14 @@ Un Thread est la plus petite unité d'excution (ensemble d'instructions) contenu
 L’ordonnanceur/scheduler est un composant du noyau du système d'exploitation choisissant l'ordre d'exécution des processus/threads.
 
 
-## Création des threads en java   
 
-### Création par héritage de la classe Thread  
+## Cycle de vie d’un Thread   
+
+![](https://github.com/AfifBouzidi/JAVA_CONCURRENCY/blob/master/Thread_lifecycle.png)  
+
+### Création des threads en java   
+
+#### Création par héritage de la classe Thread  
 La classe Thread peut être utilisée pour créer et démarrer un nouveau thread, les étapes de création des instances sont:  
 
 - Création d’une classe qui hérite de la classe Thread: ```` class MyThread extends Thread ````
@@ -25,7 +30,7 @@ La classe Thread peut être utilisée pour créer et démarrer un nouveau thread
 
 
 
-### Création par implémentation de l'interface Runnable  
+#### Création par implémentation de l'interface Runnable  
 Lorsqu’on utilise la méthode précédente pour créer des Threads on perd la flexibilité d'hériter d'une autre classe, pour contourner ce problème, au lieu d'étendre la classe Thread, on utilise l’implémentation de l'interface Runnable. les étapes de création d'une instance Thread:
 
 - Création d’une classe implémentant l’interface Runnable: ````class MyRunnable implements Runnable````   
@@ -38,13 +43,7 @@ Lorsqu’on utilise la méthode précédente pour créer des Threads on perd la 
 - Invocation de la méthode start() de l’instance créée: ````  myThread.start() ````  
 
 
-
-
-## Cycle de vie d’un Thread   
-
-![](https://github.com/AfifBouzidi/JAVA_CONCURRENCY/blob/master/Thread_lifecycle.png)  
-
-### Lancer le thread   
+### Lancement d’un thread   
 On appelle la méthode start() une seule fois sur une instance de thread lorsque celle-ci est
 à l'état NEW. L'appel de start () sur un thread dans un autre état déclenchera une exception IllegalThreadStateException.
   
@@ -132,16 +131,55 @@ Si un seul thread lit et écrit la valeur d'une variable volatile et que d'autre
 
 ### Problèmes dans un environnement multithread  
 
-### Deadlock  
+#### Deadlock  
 Le Deadlock se produit lorsqu'un thread attend un verrou d'objet, acquis par un autre thread et que le second thread attend un verrou d'objet acquis par le premier thread.  
 
 ![](https://github.com/AfifBouzidi/JAVA_CONCURRENCY/blob/master/Deadlock.png)
 
-### Starvation  
+#### Starvation  
 Starvation décrit une situation dans laquelle un thread détient un verrou pendant longtemps, de sorte que les autres threads sont bloqués :
 - Les threads sont bloqués indéfiniment car un thread met longtemps à exécuter un code synchronized  
 
 - Un thread ne reçoit pas de temps CPU pour l'exécution car il a une priorité basse par rapport aux autres threads qui ont une priorité plus élevée.  
 
-### Livelock  
+#### Livelock  
 Les threads dans un livelock ne sont pas bloqués, ils se répondent, mais ils ne peuvent pas aller jusqu'au bout. C'est comparable à deux personnes A et B qui se croisent dans un couloir. A se déplace à sa gauche pour laisser passer B, tandis que B se déplace à sa droite pour laisser passer A. Ils se bloquent, A se place à sa droite, tandis que B se place à sa gauche. Ils se bloquent encore.
+
+## Le framework Executor
+La classe Thread et l'interface Runnable sont fortement couplées à la notion de tâche (unité logique de travail), pour les programmes complexes il est nécessaire de faire une séparation entre la définition d’une tâche (logique métier) et la création et la gestion des threads (responsabilité Technique).    
+Le Framework Executor permet de découpler la soumission de tâches de l'exécution. On peut créer des tâches à l'aide des interfaces Runnable et Callable, ces tâches sont soumises à l'exécuteur.  
+
+![](https://github.com/AfifBouzidi/JAVA_CONCURRENCY/blob/master/Executor.png)  
+
+Les classes et les interfaces principales dans le package java.util.concurrent  
+
+![](https://github.com/AfifBouzidi/JAVA_CONCURRENCY/blob/master/java.util.concurrent.png)
+
+### L’interface Callable  
+La méthode run() de l’interface Runnable ne renvoie pas de valeur et ne peut pas lever une checked exception. Les deux sont pris en charge par l'interface Callable (Si Callable ne renvoie pas une valeur, en utilise ````Callable <Void>````)
+
+````public interface Callable<V> {V call() throws Exception;}````  
+
+### L’interface Future 
+Future représente le résultat d'une tâche asynchrone, elle fournit des méthodes pour vérifier si tâche est terminée, pour attendre son achèvement et pour récupérer le résultat.
+
+### L’interface Executor 
+L'interface Executor permet de définir des classes responsables de l’exécution des tâches implémentant l’interface Runnable, fournit une seule méthode: ````void	execute(Runnable command)````  
+
+### L'interface ExecutorService  
+L'interface ExecutorService étend l'interface Executor et définit des méthodes permettant de gérer la progression et la terminaison des tâches. Il définit des méthodes pour soumettre des objets Runnable et Callable  pour l’exécution en renvoyant des objets Future.
+
+### L’interface ScheduledExecutorService  
+L’interface ScheduledExecutorService permet de lancer des tâches périodiques. Ces tâches peuvent se lancer après un certain laps de temps.
+
+### Thread pools  
+Un pool de threads comprend un pool homogène de threads, celles-ci sont généralement liées à une file d'attente contient des tâches.  L'utilisation d'un pool permet de contrôler le nombre maximum de threads qui peuvent être exécutés en simultané. Pour derterminer la taille optimale du pool de threads on peut invoquer la méthode availableProcessors() de la classe Runtime qui renvoie un entier représentant le nombre de processeurs disponibles sur la machine et d'utiliser cette valeur comme taille du pool:
+
+### La classe Executors  
+La classe Executors du package java.util.concurrent définit des méthodes statiques permettant de récupérer plusieurs pools de threads préconfigurés:
+- Fixed thread pool
+- Cached thread pool
+- Single thread executor
+- Scheduled thread pool
+
+
