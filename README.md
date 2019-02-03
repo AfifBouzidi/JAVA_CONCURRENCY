@@ -12,9 +12,14 @@ Un Thread est la plus petite unité d'excution (ensemble d'instructions) contenu
 L’ordonnanceur/scheduler est un composant du noyau du système d'exploitation choisissant l'ordre d'exécution des processus/threads.
 
 
-## Création des threads en java   
 
-### Création par héritage de la classe Thread  
+## Cycle de vie d’un Thread   
+
+![](https://github.com/AfifBouzidi/JAVA_CONCURRENCY/blob/master/Thread_lifecycle.png)  
+
+### Création des threads en java   
+
+#### Création par héritage de la classe Thread  
 La classe Thread peut être utilisée pour créer et démarrer un nouveau thread, les étapes de création des instances sont:  
 
 - Création d’une classe qui hérite de la classe Thread: ```` class MyThread extends Thread ````
@@ -25,7 +30,7 @@ La classe Thread peut être utilisée pour créer et démarrer un nouveau thread
 
 
 
-### Création par implémentation de l'interface Runnable  
+#### Création par implémentation de l'interface Runnable  
 Lorsqu’on utilise la méthode précédente pour créer des Threads on perd la flexibilité d'hériter d'une autre classe, pour contourner ce problème, au lieu d'étendre la classe Thread, on utilise l’implémentation de l'interface Runnable. les étapes de création d'une instance Thread:
 
 - Création d’une classe implémentant l’interface Runnable: ````class MyRunnable implements Runnable````   
@@ -37,12 +42,6 @@ Lorsqu’on utilise la méthode précédente pour créer des Threads on perd la 
 
 - Invocation de la méthode start() de l’instance créée: ````  myThread.start() ````  
 
-
-
-
-## Cycle de vie d’un Thread   
-
-![](https://github.com/AfifBouzidi/JAVA_CONCURRENCY/blob/master/Thread_lifecycle.png)  
 
 ### Lancer le thread   
 On appelle la méthode start() une seule fois sur une instance de thread lorsque celle-ci est
