@@ -144,3 +144,7 @@ Starvation décrit une situation dans laquelle un thread détient un verrou pend
 
 #### Livelock  
 Les threads dans un livelock ne sont pas bloqués, ils se répondent, mais ils ne peuvent pas aller jusqu'au bout. C'est comparable à deux personnes A et B qui se croisent dans un couloir. A se déplace à sa gauche pour laisser passer B, tandis que B se déplace à sa droite pour laisser passer A. Ils se bloquent, A se place à sa droite, tandis que B se place à sa gauche. Ils se bloquent encore.
+
+## Le framework Executor
+La classe Thread et l'interface Runnable sont fortement couplées à la notion de tâche (unité logique de travail), pour les programmes complexes il est nécessaire de faire une séparation entre la définition d’une tâche (logique métier) et la création et la gestion des threads (responsabilité Technique).    
+Le Framework Executor permet de découpler la soumission de tâches de l'exécution. On peut créer des tâches à l'aide des interfaces Runnable et Callable, ces tâches sont soumises à l'exécuteur.
