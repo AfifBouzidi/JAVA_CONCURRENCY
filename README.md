@@ -165,3 +165,6 @@ Future représente le résultat d'une tâche asynchrone, elle fournit des métho
 
 ### L’interface Executor 
 L'interface Executor permet de définir des classes responsables de l’exécution des tâches implémentant l’interface Runnable, fournit une seule méthode: ````void	execute(Runnable command)````  
+
+### L'interface ExecutorService  
+L'interface ExecutorService étend l'interface Executor et définit des méthodes permettant de gérer la progression et la terminaison des tâches. Il définit des méthodes pour soumettre des objets Runnable et Callable  pour l’exécution en renvoyant des objets Future.
