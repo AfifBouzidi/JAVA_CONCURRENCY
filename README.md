@@ -156,7 +156,7 @@ Les classes et les interfaces principales dans le package java.util.concurrent
 ![](https://github.com/AfifBouzidi/JAVA_CONCURRENCY/blob/master/java.util.concurrent.png)
 
 ### L’interface Callable  
-La méthode run() de l’interface Runnable ne renvoie pas de valeur et ne peut pas lever une checked exception. Les deux sont pris en charge par l'interface Callable
+La méthode run() de l’interface Runnable ne renvoie pas de valeur et ne peut pas lever une checked exception. Les deux sont pris en charge par l'interface Callable (Si Callable ne renvoie pas une valeur, en utilise Callable <Void>)
 
 ````public interface Callable<V> {V call() throws Exception;}````  
 
