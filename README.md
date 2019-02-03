@@ -167,6 +167,15 @@ Future représente le résultat d'une tâche asynchrone, elle fournit des métho
 
 - Plusieurs Futurs ne peuvent pas être enchaînés 
 
+### CompletableFuture  
+Java 8 a proposé de nombreuses fonctionnalités et améliorations, telles que CompletableFuture. Par défaut CompletableFuture exécute les tâches dans le pool du thread ForkJoinPool.commonPool() mais on peut utiliser un autre pool de thread, CompletableFuture permet :  
+- Exécution d'une tâche asynchrone à l'aide de runAsync()  
+
+- Exécuter une tâche de manière asynchrone et renvoyer le résultat à l'aide de supplyAsync() 
+
+- Exécuter une action suite après la fin d’une tâche et retourner un résultat thenApply() 
+
+- Exécuter une action suite après la fin d’une tâche sans retourner un résultat thenAccept() and thenRun() 
 
 ### L’interface Executor 
 L'interface Executor permet de définir des classes responsables de l’exécution des tâches implémentant l’interface Runnable, fournit une seule méthode: ````void	execute(Runnable command)````  
