@@ -161,7 +161,21 @@ La méthode run() de l’interface Runnable ne renvoie pas de valeur et ne peut 
 ````public interface Callable<V> {V call() throws Exception;}````  
 
 ### L’interface Future 
-Future représente le résultat d'une tâche asynchrone, elle fournit des méthodes pour vérifier si tâche est terminée, pour attendre son achèvement et pour récupérer le résultat.
+Future représente le résultat d'une tâche asynchrone, elle fournit des méthodes pour vérifier si tâche est terminée, pour attendre son achèvement et pour récupérer le résultat. L’utilisation de l’interface Future présente plusieurs limites, par exemples :  
+
+- Future ne vous informe pas de son achèvement, il fournit une méthode get () qui bloque jusqu'à ce que le résultat soit disponible.  
+
+- Plusieurs Futurs ne peuvent pas être enchaînés 
+
+### CompletableFuture  
+Java 8 a proposé de nombreuses fonctionnalités et améliorations, telles que CompletableFuture. Par défaut CompletableFuture exécute les tâches dans le pool du thread ForkJoinPool.commonPool() mais on peut utiliser un autre pool de thread, CompletableFuture permet :  
+- Exécution d'une tâche asynchrone à l'aide de runAsync()  
+
+- Exécuter une tâche de manière asynchrone et renvoyer le résultat à l'aide de supplyAsync() 
+
+- Exécuter une action après la fin d’une tâche et retourner un résultat thenApply() 
+
+- Exécuter une action après la fin d’une tâche sans retourner un résultat thenAccept() and thenRun() 
 
 ### L’interface Executor 
 L'interface Executor permet de définir des classes responsables de l’exécution des tâches implémentant l’interface Runnable, fournit une seule méthode: ````void	execute(Runnable command)````  
