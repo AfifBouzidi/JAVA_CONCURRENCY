@@ -151,3 +151,6 @@ Le Framework Executor permet de découpler la soumission de tâches de l'exécut
 
 ![](https://github.com/AfifBouzidi/JAVA_CONCURRENCY/blob/master/Executor.png)  
 
+Les classes et les interfaces principales dans le package java.util.concurrent  
+
+![](https://github.com/AfifBouzidi/JAVA_CONCURRENCY/blob/master/java.util.concurrent.png)
