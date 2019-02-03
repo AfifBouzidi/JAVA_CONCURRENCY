@@ -196,4 +196,4 @@ La classe Executors du package java.util.concurrent définit des méthodes stati
 - Single thread executor
 - Scheduled thread pool
 
-
+### Parallel fork/join framework
