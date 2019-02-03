@@ -173,9 +173,9 @@ Java 8 a proposé de nombreuses fonctionnalités et améliorations, telles que C
 
 - Exécuter une tâche de manière asynchrone et renvoyer le résultat à l'aide de supplyAsync() 
 
-- Exécuter une action suite après la fin d’une tâche et retourner un résultat thenApply() 
+- Exécuter une action après la fin d’une tâche et retourner un résultat thenApply() 
 
-- Exécuter une action suite après la fin d’une tâche sans retourner un résultat thenAccept() and thenRun() 
+- Exécuter une action après la fin d’une tâche sans retourner un résultat thenAccept() and thenRun() 
 
 ### L’interface Executor 
 L'interface Executor permet de définir des classes responsables de l’exécution des tâches implémentant l’interface Runnable, fournit une seule méthode: ````void	execute(Runnable command)````  
