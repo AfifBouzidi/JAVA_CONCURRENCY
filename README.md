@@ -168,3 +168,6 @@ L'interface Executor permet de définir des classes responsables de l’exécuti
 
 ### L'interface ExecutorService  
 L'interface ExecutorService étend l'interface Executor et définit des méthodes permettant de gérer la progression et la terminaison des tâches. Il définit des méthodes pour soumettre des objets Runnable et Callable  pour l’exécution en renvoyant des objets Future.
+
+### L’interface ScheduledExecutorService  
+L’interface ScheduledExecutorService permet de lancer des tâches périodiques. Ces tâches peuvent se lancer après un certain laps de temps.
