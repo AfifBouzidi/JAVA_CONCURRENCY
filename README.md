@@ -175,6 +175,8 @@ L’interface ScheduledExecutorService permet de lancer des tâches périodiques
 ### Thread pools  
 Un pool de threads comprend un pool homogène de threads, celles-ci sont généralement liées à une file d'attente contient des tâches.  L'utilisation d'un pool permet de contrôler le nombre maximum de threads qui peuvent être exécutés en simultané. Pour derterminer la taille optimale du pool de threads on peut invoquer la méthode availableProcessors() de la classe Runtime qui renvoie un entier représentant le nombre de processeurs disponibles sur la machine et d'utiliser cette valeur comme taille du pool:
 
+### La classe Executors  
+La classe Executors du package java.util.concurrent définissent des méthodes statiques permettant de récupérer plusieurs pools de threads préconfigurés:
 - Fixed thread pool
 - Cached thread pool
 - Single thread executor
