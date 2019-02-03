@@ -43,7 +43,7 @@ Lorsqu’on utilise la méthode précédente pour créer des Threads on perd la 
 - Invocation de la méthode start() de l’instance créée: ````  myThread.start() ````  
 
 
-### Lancer le thread   
+### Lancement d’un thread   
 On appelle la méthode start() une seule fois sur une instance de thread lorsque celle-ci est
 à l'état NEW. L'appel de start () sur un thread dans un autre état déclenchera une exception IllegalThreadStateException.
   
