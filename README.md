@@ -160,6 +160,6 @@ La méthode run() de l’interface Runnable ne renvoie pas de valeur et ne peut 
 
 ````public interface Callable<V> {V call() throws Exception;}````  
 
-### Future 
+### L’interface Future 
 Future représente le résultat d'une tâche asynchrone, elle fournit des méthodes pour vérifier si tâche est terminée, pour attendre son achèvement et pour récupérer le résultat.
 
