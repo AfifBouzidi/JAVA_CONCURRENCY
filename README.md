@@ -213,5 +213,3 @@ fork/join framework  a été conçu pour accélérer l’exécution de tâches q
 
 - ForkJoinPool est une implémentation de l'interface ExecutorService. Il existe une instance commune ForkJoinPool disponible pour toutes les applications qu'on peut obtenir avec la méthode statique commonPool():  
 ````ForkJoinPool commonPool = ForkJoinPool.commonPool();````
-
-### Parallel Stream
