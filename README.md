@@ -196,6 +196,13 @@ La classe Executors du package java.util.concurrent définit des méthodes stati
 - Single thread executor
 - Scheduled thread pool
 
-### Parallel fork/join framework
+### Parallel fork/join framework 
+fork/join framework  a été conçu pour accélérer l’exécution de tâches qui peuvent être divisées en sous-tâches plus petites, les sous-tâches sont exécutées en parallèle. La résolution se fait en deux étapes : 
+
+- Fork : Divise récursivement la tâche en sous-tâches plus petites jusqu'à ce qu'un seuil donné soit atteint.  
+
+- Join : les sous-tâches sont traitées indépendamment et si elles renvoient un résultat, tous les résultats sont combinés de manière récursive en un seul résultat.  
+
+ La résolution par fork/join framework  est possible si les sous-tâches sont indépendantes les unes des autres.
 
 ### Parallel Stream
