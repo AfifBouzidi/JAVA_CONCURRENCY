@@ -9,7 +9,7 @@ Un Thread est la plus petite unité d'excution (ensemble d'instructions) contenu
 
 ### Ordonnanceur  
 
-L’ordonnanceur/scheduler est un composant du noyau du système d'exploitation choisissant l'ordre d'exécution des processus/threads.
+L’ordonnanceur/scheduler est un composant du noyau du système d'exploitation qui choisit l'ordre d'exécution des processus/threads.
 
 
 
