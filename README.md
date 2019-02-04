@@ -7,11 +7,12 @@ Un Thread est la plus petite unité d'excution (ensemble d'instructions) contenu
 
 ![](https://github.com/AfifBouzidi/JAVA_CONCURRENCY/blob/master/Thread.png)  
 
+### Daemon thread
+Un thread démon n'empêche pas la JVM de s'arrêter même s'il est encore en cours d'exécution. Une application dans laquelle les seuls threads actifs sont des démons est automatiquement fermée. Pour démarrer un Thread démon, on doit appeler la méthode setDaemon() avant d'appeler start().
+
 ### Ordonnanceur  
 
 L’ordonnanceur/scheduler est un composant du noyau du système d'exploitation qui choisit l'ordre d'exécution des processus/threads.
-
-
 
 ## Cycle de vie d’un Thread   
 
@@ -128,6 +129,8 @@ Les variables volatiles Java sont des variables qui sont toujours lues directeme
 L'écriture d'une valeur dans une variable volatile est une opération atomique. Cependant, une séquence read-update-write  effectuée sur une variable volatile n'est pas atomique et conduit toujours à des conditions de concurrence si elle est effectuée par plusieurs threads (exemple opérations sur les compteurs), si deux threads lisent et écrivent à la fois sur une variable partagée, utiliser le mot-clé volatile ne permet pas de résoudre le problème d’accès concurrent.
 
 Si un seul thread lit et écrit la valeur d'une variable volatile et que d'autres threads ne lisent que la variable, alors les threads en lecture verront la dernière valeur écrite dans la variable volatile. Sans rendre la variable volatile, cela ne serait pas garanti.
+
+L’incrémentation est généralement effectuée en plusieurs étapes (récupération d’une valeur, modification et écriture), de sorte qu’il n’est jamais garanti qu’elle soit atomique, que la variable soit volatile ou non. Donc pour assurer l’atomicité on doit utiliser les classes AtomicInteger, AtomicLong…
 
 ### Problèmes dans un environnement multithread  
 
