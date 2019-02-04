@@ -2,6 +2,8 @@
 
 La programmation concurrente est un paradigme de programmation qui permet d'effectuer plusieurs opérations en même temps. Les flux d'opérations peuvent s'exécuter simultanément, chaque flux d’opérations s'exécute comme dans un programme séquentiel, à l'exception que les flux peuvent communiquer et interférer les uns avec les autres.
 
+![](https://github.com/AfifBouzidi/JAVA_CONCURRENCY/blob/master/Programmation%20concurrente.png)
+
 ## Définitions
 ### Processus  
 Un processus est un programme (ensemble d'instructions) en cours d'exécution, une machine exécute généralement plusieurs processus de façon quasi simultanée et qui sont totalement isolés les uns des autres, chaque processus possède ces propores ressources (mémoires, temps processeur,...).   
