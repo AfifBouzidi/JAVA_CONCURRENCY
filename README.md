@@ -216,3 +216,39 @@ fork/join framework  a été conçu pour accélérer l’exécution de tâches q
 
 - ForkJoinPool est une implémentation de l'interface ExecutorService. Il existe une instance commune ForkJoinPool disponible pour toutes les applications qu'on peut obtenir avec la méthode statique commonPool():  
 ````ForkJoinPool commonPool = ForkJoinPool.commonPool();````
+
+## Questions 
+- Quelle est la différence entre un processus et un thread? 
+
+- Comment créer une instance de thread et l'exécuter?  
+
+- Décrivez les différents états d’un thread ?  
+
+- Comment se produisent les transitions d’états d’un Thread ?  
+
+- Quelle est la différence entre les interfaces Runnable et Callable? Comment sont-ils utilisés?  
+
+- Qu'est-ce qu'un Thread démon?   
+
+- Comment créer un thread démon?  
+
+- Qu'est-ce que un Thread interrupt flag ?  
+
+- Expliquer l’exception InterruptedException ?  
+
+- Quel est le rôle d’Executor et de l’ExecutorService ?  
+
+- Quelles sont les implémentations disponibles d’ExecutorService ?  
+
+- Qu'est-ce qu'une variable volatile ?  
+
+- Quelle est la signification de synchronized dans la définition d'une méthode? D'une méthode statique? Avant un bloc?  
+
+- Si deux threads appellent simultanément une méthode synchronized sur différentes instances d'objet, l'un de thread sera bloqué? Et si la méthode est statique?  
+
+- Quel est le but des méthodes wait, notify et notifyAll de la classe Object?  
+
+- Décrivez les  deadlock, livelock et starvation ?  
+
+- Décrire le but et les cas d'utilisation du framework fork / join ?  
+
