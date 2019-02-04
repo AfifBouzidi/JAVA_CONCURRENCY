@@ -211,9 +211,6 @@ fork/join framework  a été conçu pour accélérer l’exécution de tâches q
 
 - RecursiveTask, qui représente les tâches qui génèrent des valeurs de retour, comme un Callable 
 
-Il existe une instance commune ForkJoinPool disponible pour toutes les applications qu'on peut obtenir avec la méthode statique commonPool(): ````ForkJoinPool commonPool = ForkJoinPool.commonPool();````
-
-
-
+- ForkJoinPool est une implémentation de l'interface ExecutorService. Il existe une instance commune ForkJoinPool disponible pour toutes les applications qu'on peut obtenir avec la méthode statique commonPool(): ````ForkJoinPool commonPool = ForkJoinPool.commonPool();````
 
 ### Parallel Stream
