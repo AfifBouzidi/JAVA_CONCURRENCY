@@ -205,4 +205,15 @@ fork/join framework  a été conçu pour accélérer l’exécution de tâches q
 
  La résolution par fork/join framework  est possible si les sous-tâches sont indépendantes les unes des autres.
 
+![](https://github.com/AfifBouzidi/JAVA_CONCURRENCY/blob/master/fork_join.png)  
+
+- RecursiveAction, qui représente des tâches qui ne génèrent pas de valeur de retour, comme un Runnable. 
+
+- RecursiveTask, qui représente les tâches qui génèrent des valeurs de retour, comme un Callable 
+
+Il existe une instance commune ForkJoinPool disponible pour toutes les applications que vous pouvez obtenir avec la méthode statique commonPool(): ````ForkJoinPool commonPool = ForkJoinPool.commonPool();````
+
+
+
+
 ### Parallel Stream
